@@ -1,3 +1,13 @@
 .navbar-text {
-    color: red;
+  color: red;
+}
+#nav {
+  background-color: #61d264;
+  color: #000;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
