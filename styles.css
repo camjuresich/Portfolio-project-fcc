@@ -1,7 +1,11 @@
+@media (hover: hover) {
+  /* … */
+}
+
 .navbar-text {
   color: red;
 }
-#nav {
+#navbar {
   background-color: #61d264;
   color: #000;
 }
