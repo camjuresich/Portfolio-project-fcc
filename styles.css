@@ -32,6 +32,7 @@ body {
 }
 
 .hero {
+    background-color: #fff;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -254,12 +255,18 @@ a.icon {
     .card-description {
         font-size: 0.9rem;
     }
+    .card {
+        /* margin-bottom: 600px; */
+    }
 }
 
 @media (min-width: 615px) {
     .card {
         max-width: 500px;
         align-self: center;
+        /* justify-content: center; */
+        /* margin: 0; */
+        /* margin-bottom: 60px; */
     }
 }
 
@@ -341,3 +348,27 @@ a.icon {
         background-color: transparent;
     }
 }
+/* current issues with webpage
+
+** MOBILE ISSUES
+* when viewing the page on mobile in landscape mode,
+* the background colors do not reach the edges of 
+* the screen
+
+* when scrolling onto the about me section 
+* the buttons in safari tend to fall out of 
+* focus. 
+
+* in portrait mode on iphone the buttons still bleed
+* off the card. 
+** possible fix **
+* try switching the cards to a grid layout 
+
+* when scrolling up in the page the navigation controls
+* have a tendancy to get in the way.
+** possible fix **
+* it may be wise to move all the cards up just a bit 
+* to avoid bad viewing angles
+
+
+*/
