@@ -2,7 +2,7 @@ svg {
     fill: #434343;
 }
 html {
-    background: linear-gradient(#c3f9d5, #434343);
+    background-color: #c3f9d5;
     scroll-snap-type: y mandatory;
 }
 html,
