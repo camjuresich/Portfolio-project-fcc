@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     color: #434343;
+    font-size: 16px;
 }
 
 #navbar {
@@ -171,15 +172,17 @@ body {
     margin-top: 2em;
     font-size: 1.2rem;
 }
-
-.card-link,
-.card-link:visited {
+.card-link {
+    margin-top: auto;
     background-color: #ffb55d;
     padding: 1em;
     text-align: center;
-    margin-top: auto;
-    color: #434343;
     border-radius: 9px;
+}
+
+.card-link,
+.card-link:visited {
+    color: #434343;
 }
 
 #about {
@@ -242,7 +245,7 @@ a.icon {
 }
 
 /* very small phones */
-@media only screen and (width <= 376px) {
+@media screen and (width <= 376px) {
     .card-title {
         margin: 0 0 0.5em 0;
         padding: 0;
@@ -250,6 +253,60 @@ a.icon {
     .card-description {
         font-size: 0.9rem;
     }
+}
+
+@media (min-width: 615px) {
+    .card {
+        max-width: 500px;
+        align-self: center;
+    }
+}
+
+@media screen and (width < 999px) and (orientation: landscape) {
+    .card {
+        display: grid;
+        /* width: 100%; */
+        max-width: 90%;
+        /* height: 90vh; */
+        /* width: 100%; */
+        grid-template-areas: 
+            "image title title"
+            "image descr descr"
+            "image descr descr"
+            "image linky linky"
+            ;
+        gap: 0 1em;
+        /* flex-direction: row; */
+    }
+    .card-title {
+        grid-area: title;
+        margin: 0;
+    }
+    .card-image {
+        margin: 0;
+        /* align-self: center; */
+        /* justify-self: start; */
+        /* height: fit-content; */
+        /* width: 100%; */
+        grid-area: image;
+        height: 70vh;
+    }
+    .card-description {
+        grid-area: descr;
+        margin: 0;
+    }
+    .card-link {
+        grid-area: linky;
+        /* align-self: center; */
+        /* justify-self: stretch; */
+        /* margin: 0; */
+        align-self: stretch;
+    }
+    /* .project-one, */
+    /* .project-two, */
+    /* .project-three { */
+        /* background-color: transparent; */
+    /* } */
 }
 
 /* need to fix views on phones in landscape mode*/
@@ -261,12 +318,6 @@ a.icon {
 } */
 
 /* for tablet views */
-@media (min-width: 615px) {
-    .card {
-        max-width: 500px;
-        align-self: center;
-    }
-}
 
 /* for desktop views */
 @media (min-width: 1000px) {
