@@ -1,17 +1,316 @@
-@media (hover: hover) {
-  /* … */
+svg {
+    fill: #434343;
+}
+html {
+    scroll-snap-type: y mandatory;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #434343;
 }
 
-.navbar-text {
-  color: red;
-}
 #navbar {
-  background-color: #61d264;
-  color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c3f9d5;
+    padding: 0 0.5em;
+    margin: 0;
+    font-family: "Source Code Pro", monospace;
+    position: fixed;
+    width: calc(100% - 1em);
+    z-index: 2;
 }
 
-.pacifico-regular {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
+#nav-hamburger {
+    background: none;
+    border: none;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-roles {
+    font-family: "Source Code Pro", monospace;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+.word {
+    transition: all 0.5s ease;
+    padding: 0;
+    opacity: 0;
+}
+
+.star {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.hero-intro {
+    margin: 0;
+    font-family: "Pacifico", cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.sect2 {
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+#menu-large {
+    display: none;
+}
+
+#menu {
+    margin-top: 52px;
+    position: fixed;
+    list-style: none;
+    background-color: #c3f9d5;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    gap: 1em;
+    padding: 1em 1em;
+    font-family: "Source Code Pro", monospace;
+    z-index: 1;
+    transition: transform 0.25s ease-in-out;
+}
+
+#menu-large li a:visited,
+#menu li a:visited,
+#menu-large li a,
+#menu li a {
+    color: #434343;
+    text-decoration: none;
+}
+
+#menu-large li a:hover,
+#menu li a:hover {
+    text-decoration: underline;
+}
+
+.menu-hidden {
+    transform: translateY(-150%);
+    display: hidden;
+}
+
+#menu-icon g path {
+    transition: all 0.25s linear;
+}
+
+.menu-toggled #middle-line-1 {
+    transform-origin: center;
+    transform: rotate(-45deg);
+}
+
+.menu-toggled #middle-line-2 {
+    transform-origin: center;
+    transform: rotate(45deg);
+}
+
+.menu-toggled #top-line {
+    opacity: 0;
+}
+
+.menu-toggled #bottom-line {
+    opacity: 0;
+}
+
+.snap-align {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.project {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-one {
+    background-color: #29335c;
+}
+
+.project-two {
+    background-color: #28afb0;
+}
+
+.project-three {
+    background-color: #286fb0;
+}
+
+.card {
+    background-color: white;
+    font-family: "Source Code Pro", monospace;
+    display: flex;
+    flex-direction: column;
+    border-radius: 9px;
+    padding: 1em;
+    height: 80vh;
+    margin: 1.5em;
+    margin-top: calc(1.5em + 52px);
+    max-width: 500px;
+}
+
+.card-description {
+    margin-top: 2em;
+    font-size: 1.2rem;
+}
+
+.card-link,
+.card-link:visited {
+    background-color: #ffb55d;
+    padding: 1em;
+    text-align: center;
+    margin-top: auto;
+    color: #434343;
+    border-radius: 9px;
+}
+
+#about {
+    height: 100vh;
+    background-color: #434343;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about-title {
+    margin: 1rem;
+    margin-top: calc(52px + 1rem);
+    padding: 0;
+}
+
+#about-desc {
+    margin: 1rem;
+    margin-top: 0;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+#about-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 5px;
+}
+
+.icon {
+    width: 3rem;
+    fill: #fff;
+    margin: 0;
+}
+
+.icon path {
+    transition: all 0.25s ease;
+    fill: #fff;
+}
+
+.icon:hover path,
+.icon:focus path {
+    fill: #ffb55d;
+}
+
+a.icon {
+    margin-bottom: 0;
+}
+
+#github {
+    width: 2.5rem;
+    transform: translateY(5px);
+}
+
+#about * {
+    color: #fff;
+    font-family: "Source Code Pro", monospace;
+}
+
+/* very small phones */
+@media only screen and (width <= 376px) {
+    .card-title {
+        margin: 0 0 0.5em 0;
+        padding: 0;
+    }
+    .card-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* need to fix views on phones in landscape mode*/
+
+/* @media (min-width: 568px) and (min-height: 320px) {
+    #about {
+        background-color: red;
+    }
+} */
+
+/* for tablet views */
+@media (min-width: 615px) {
+    .card {
+        max-width: 500px;
+        align-self: center;
+    }
+}
+
+/* for desktop views */
+@media (min-width: 1000px) {
+    .projects {
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        background-color: #29335c;
+        width: 100%;
+        grid-template-columns: repeat(3, 33%);
+    }
+
+    #nav-title {
+        padding-left: 12em;
+    }
+
+    #menu-large {
+        display: flex;
+        list-style: none;
+        gap: 1em;
+    }
+
+    #nav-hamburger {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .card {
+        align-self: center;
+        max-height: 780px;
+        max-width: 80%;
+    }
+
+    .card-description {
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .project-one,
+    .project-two,
+    .project-three {
+        background-color: transparent;
+    }
 }
