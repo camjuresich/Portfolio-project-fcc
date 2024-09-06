@@ -3,6 +3,7 @@ svg {
 }
 html {
     scroll-snap-type: y mandatory;
+    background-color: #c3f9d5;
 }
 html,
 body {
@@ -265,10 +266,7 @@ a.icon {
 @media screen and (width < 999px) and (orientation: landscape) {
     .card {
         display: grid;
-        /* width: 100%; */
         max-width: 90%;
-        /* height: 90vh; */
-        /* width: 100%; */
         grid-template-areas: 
             "image title title"
             "image descr descr"
@@ -276,7 +274,6 @@ a.icon {
             "image linky linky"
             ;
         gap: 0 1em;
-        /* flex-direction: row; */
     }
     .card-title {
         grid-area: title;
@@ -284,10 +281,6 @@ a.icon {
     }
     .card-image {
         margin: 0;
-        /* align-self: center; */
-        /* justify-self: start; */
-        /* height: fit-content; */
-        /* width: 100%; */
         grid-area: image;
         height: 70vh;
     }
@@ -297,27 +290,10 @@ a.icon {
     }
     .card-link {
         grid-area: linky;
-        /* align-self: center; */
-        /* justify-self: stretch; */
-        /* margin: 0; */
         align-self: stretch;
     }
-    /* .project-one, */
-    /* .project-two, */
-    /* .project-three { */
-        /* background-color: transparent; */
-    /* } */
 }
 
-/* need to fix views on phones in landscape mode*/
-
-/* @media (min-width: 568px) and (min-height: 320px) {
-    #about {
-        background-color: red;
-    }
-} */
-
-/* for tablet views */
 
 /* for desktop views */
 @media (min-width: 1000px) {
