@@ -2,8 +2,8 @@ svg {
     fill: #434343;
 }
 html {
+    background: linear-gradient(#c3f9d5, #434343);
     scroll-snap-type: y mandatory;
-    background-color: #c3f9d5;
 }
 html,
 body {
