@@ -168,6 +168,7 @@ body {
     margin: 1.5em;
     margin-top: calc(1.5em + 52px);
     max-width: 500px;
+    align-self: center;
 }
 
 .card-description {
@@ -218,7 +219,8 @@ body {
 .icon {
     width: 3rem;
     fill: #fff;
-    margin: 0;
+    /* margin: 0 0 2em 0; */
+    /* padding-bottom: 2em; */
 }
 
 .icon path {
@@ -254,27 +256,50 @@ a.icon {
     .card-description {
         font-size: 0.9rem;
     }
-    .card {
-        /* margin-bottom: 600px; */
+}
+@media (width < 431px) {
+    .card-title {
+        margin: 0 0 .25rem;
     }
-    #about-contact {
-        margin-bottom: 60px;
+    .card-description {
+        margin: .25rem 0;
+    }
+    .card {
+        margin-top: 0;
+        width: 80%;
+        /* width:  */
+        height: 80svh;
+    }
+    .icon {
+        padding-bottom: 4.7em;
     }
 }
-
-@media (min-width: 615px) {
+@media (width < 615px) and (width > 431px) {
     .card {
         max-width: 500px;
         align-self: center;
+
         /* justify-content: center; */
         /* margin: 0; */
         /* margin-bottom: 60px; */
     }
+    .icon {
+        padding-bottom: 2.5em;
+    }
 }
 
+/* @media (width ) */
+
 @media screen and (width < 999px) and (orientation: landscape) {
+    html {
+        background-color: #000;
+    }
+    .hero {
+        height: calc(100svh + 52px);
+    }
     .card {
         display: grid;
+        max-height: 90svh;
         max-width: 90%;
         grid-template-areas: 
             "image title title"
@@ -303,6 +328,11 @@ a.icon {
     }
 }
 
+@media (width < 1025px) and (width > 431px) {
+    .icon {
+        padding-bottom: 1em;
+    }
+}
 
 /* for desktop views */
 @media (min-width: 1000px) {
