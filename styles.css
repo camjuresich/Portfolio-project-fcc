@@ -69,11 +69,6 @@ body {
     text-align: center;
 }
 
-.sect2 {
-    height: 100vh;
-    background-color: aquamarine;
-}
-
 #menu-large {
     display: none;
 }
@@ -257,6 +252,11 @@ a.icon {
         font-size: 0.9rem;
     }
 }
+/* @media (height = 100svh) {
+    .project-one {
+        background-color: green;
+    }
+} */
 @media (width < 431px) {
     .card-title {
         margin: 0 0 .25rem;

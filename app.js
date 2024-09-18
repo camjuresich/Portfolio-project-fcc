@@ -21,6 +21,8 @@ function toggleMenu () {
     menu.classList.toggle("menu-hidden");
 }
 
+
+
 menuIcon.addEventListener("click", toggleMenu);
 
 for (const child of menu.children) {
