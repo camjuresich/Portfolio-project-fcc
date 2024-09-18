@@ -31,7 +31,15 @@ body {
     border: none;
     font-family: "Source Code Pro", monospace;
     color: #434343;
+    font-size: 1rem;
+}
+
+.int-link-small {
     font-size: 1.25rem;
+}
+
+.int-link:hover {
+    text-decoration: underline;
 }
 
 #nav-hamburger {
