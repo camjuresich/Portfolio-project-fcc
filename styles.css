@@ -186,6 +186,7 @@ body {
     margin-top: 2em;
     font-size: 1.2rem;
 }
+
 .card-link {
     margin-top: auto;
     background-color: #ffb55d;
@@ -232,8 +233,6 @@ body {
 .icon {
     width: 3rem;
     fill: #fff;
-    /* margin: 0 0 2em 0; */
-    /* padding-bottom: 2em; */
 }
 
 .icon path {
@@ -270,11 +269,13 @@ a.icon {
         font-size: 0.9rem;
     }
 }
+
 /* @media (height = 100svh) {
     .project-one {
         background-color: green;
     }
 } */
+
 @media (width < 431px) {
     .card-title {
         margin: 0 0 .25rem;
@@ -292,21 +293,16 @@ a.icon {
         padding-bottom: 4.7em;
     }
 }
+
 @media (width < 615px) and (width > 431px) {
     .card {
         max-width: 500px;
         align-self: center;
-
-        /* justify-content: center; */
-        /* margin: 0; */
-        /* margin-bottom: 60px; */
     }
     .icon {
         padding-bottom: 2.5em;
     }
 }
-
-/* @media (width ) */
 
 @media screen and (width < 999px) and (orientation: landscape) {
     html {
@@ -401,24 +397,9 @@ a.icon {
 /* current issues with webpage
 
 ** MOBILE ISSUES
-* when viewing the page on mobile in landscape mode,
-* the background colors do not reach the edges of 
-* the screen
 
 * when scrolling onto the about me section 
 * the buttons in safari tend to fall out of 
 * focus. 
-
-* in portrait mode on iphone the buttons still bleed
-* off the card. 
-** possible fix **
-* try switching the cards to a grid layout 
-
-* when scrolling up in the page the navigation controls
-* have a tendancy to get in the way.
-** possible fix **
-* it may be wise to move all the cards up just a bit 
-* to avoid bad viewing angles
-
 
 */

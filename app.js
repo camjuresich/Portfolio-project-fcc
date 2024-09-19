@@ -16,6 +16,7 @@ const projectOneBtn = document.getElementById('project-one-btn')
 const projectTwoBtn = document.getElementById('project-two-btn')
 const projectThreeBtn = document.getElementById('project-three-btn')
 const aboutSmallBtn = document.getElementById('about-btn')
+
 function cycleRoles() {
     index = 1;
     return () => {
@@ -32,8 +33,9 @@ function scrollSnaps (section) {
     section.scrollIntoView({behavior: "smooth"})
     setTimeout(() => {
         document.querySelector('html').style.scrollSnapType = 'y mandatory'
-    }, 500)
+    }, 700)
 }
+
 homeLargeBtn.addEventListener('click', () => scrollSnaps(hero))
 projectsLargeBtn.addEventListener('click', () => scrollSnaps(projects))
 aboutLargeBtn.addEventListener('click', () => scrollSnaps(about))
@@ -47,17 +49,10 @@ setInterval(cycleRoles(), 1500);
 function toggleMenu () {
     menuIcon.classList.toggle("menu-toggled");
     menu.classList.toggle("menu-hidden");
-    // setTimeout(() => {
-        // document.querySelector('html').style.scrollSnapType = 'y mandatory'
-
-    // }, 700)
 }
-
-
 
 menuIcon.addEventListener("click", toggleMenu);
 
 for (const child of menu.children) {
     child.addEventListener("click", toggleMenu)
 }
-// menu.children("click", toggleMenu)
